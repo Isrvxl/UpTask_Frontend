@@ -110,9 +110,9 @@ export type DashboardProjects = z.infer<typeof dashboardProjectSchema>
 
 /** Team */
 export const teamMemberSchema = userSchema.pick({
-    _id: true,
     name: true,
-    email: true
+    email: true,
+    _id: true
 })
 
 export const teamMembersSchema = z.array(teamMemberSchema)
