@@ -18,7 +18,8 @@ export default function DashboardView() {
 
     const { data, isLoading } = useQuery<DashboardProjects>({
         queryKey: ['projects'],
-        queryFn: getProjects
+        queryFn: getProjects,
+        retry: false
     })
 
     if(isLoading && authLoading) return 'Cargando..'
